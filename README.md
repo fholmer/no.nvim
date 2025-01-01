@@ -6,8 +6,6 @@ of a Norwegian keyboard. It ensures a smoother workflow without compromising on 
 
 ## ⌨️ Keybindings Overview
 
-**NORMAL MODE**
-
 - **`ø` → `[`**  
   Single press for navigating backward to the previous match or block.
 
@@ -25,6 +23,9 @@ of a Norwegian keyboard. It ensures a smoother workflow without compromising on 
 
 - **`Æ` → `}`**  
   Shift-modified version for closing braces.
+
+- **`¨` → `/`**  
+ Double press for easy access to /
 
 ## 📦 Installation
 
