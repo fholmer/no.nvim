@@ -14,6 +14,10 @@ function M.setup(opts)
 	-- i.e: to type ~/ just alt-double tap ¨, then plain double tap ¨.
 	vim.keymap.set({ "n", "v", "o", "i" }, "¨", "/")
 
+	-- spell checker
+	vim.keymap.set("n", "<leader>ån", "<cmd>set spelllang=nb<cr>")
+	vim.keymap.set("n", "<leader>åe", "<cmd>set spelllang=en<cr>")
+
 	-- my other personal preferences
 	local defaults = {
 		fholmer = false,

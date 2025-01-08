@@ -25,7 +25,13 @@ of a Norwegian keyboard. It ensures a smoother workflow without compromising on 
   Shift-modified version for closing braces.
 
 - **`¨` → `/`**  
- Double press for easy access to /
+  Double press for easy access to `/`
+
+- **`<leader>ån` → `set spelllang=nb`**  
+  Enable spell check for Norwegian bokmål
+
+- **`<leader>åe` → `set spelllang=en`**  
+  Enable spell check for English
 
 ## 📦 Installation
 
