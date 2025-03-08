@@ -2,8 +2,8 @@ local M = {}
 
 function M.setup(opts)
 	-- æ/ø/å keymaps
-	vim.keymap.set("n", "Ø", "{")
-	vim.keymap.set("n", "Æ", "}")
+	vim.keymap.set({ "n", "v" }, "Ø", "{")
+	vim.keymap.set({ "n", "v" }, "Æ", "}")
 
 	vim.keymap.set({ "n", "o", "v" }, "ø", "[", { remap = true, desc = "[next" })
 	vim.keymap.set({ "n", "o", "v" }, "æ", "]", { remap = true, desc = "]next" })
