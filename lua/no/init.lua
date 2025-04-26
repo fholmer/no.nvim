@@ -27,17 +27,10 @@ function M.setup(opts)
 	if opts.fholmer then
 		vim.keymap.set({ "n", "v", "o", "i", "c" }, "¨", "/")
 		vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]])
-
-		vim.api.nvim_create_autocmd("User", {
-			pattern = "VeryLazy",
-			callback = function()
-				vim.keymap.set({ "n", "v", "o" }, "<C-Up>", "(")
-				vim.keymap.set({ "n", "v", "o" }, "<C-Down>", ")")
-				vim.keymap.del("n", "<C-Right>")
-				vim.keymap.del("n", "<C-Left>")
-			end,
-		})
-
+		vim.keymap.set("n", "<C-Left>", "B", { desc = "Move to previous word" })
+		vim.keymap.set("n", "<C-Right>", "W", { desc = "Move to next word" })
+		vim.keymap.set({ "n", "v", "o", "i" }, "<C-Up>", "(", { desc = "Move to previous expression" })
+		vim.keymap.set({ "n", "v", "o", "i" }, "<C-Down>", ")", { desc = "Move to next expression" })
 		vim.keymap.set("n", "<A-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 		vim.keymap.set("n", "<A-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 		vim.keymap.set("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
