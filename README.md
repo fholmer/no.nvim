@@ -19,13 +19,16 @@ of a Norwegian keyboard. It ensures a smoother workflow without compromising on 
   Double press for jumping to the start of the next function or block.
 
 - **`Ø` → `{`**  
-  Shift-modified version for working with braces.
+  Move to previous paragraph.
 
 - **`Æ` → `}`**  
-  Shift-modified version for closing braces.
+  Move to next paragraph.
 
-- **`¨` → `/`**  
-  Double press for easy access to `/`
+- **`Ø` → `(`**  
+  Move to previous sentence.
+
+- **`Æ` → `)`**  
+  Move to next sentence.
 
 - **`<leader>ån` → `set spelllang=nb`**  
   Enable spell check for Norwegian bokmål

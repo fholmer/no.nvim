@@ -2,8 +2,10 @@ local M = {}
 
 function M.setup(opts)
 	-- æ/ø/å keymaps
-	vim.keymap.set({ "n", "v" }, "Ø", "{")
-	vim.keymap.set({ "n", "v" }, "Æ", "}")
+	vim.keymap.set({ "n", "v", "o" }, "<S-Ø>", "{", { remap = false, desc = "Move to previous paragraph" })
+	vim.keymap.set({ "n", "v", "o" }, "<S-Æ>", "}", { remap = false, desc = "Move to next paragraph" })
+	vim.keymap.set({ "n", "v", "o" }, "<C-ø>", "(", { remap = false, desc = "Move to previous sentence" })
+	vim.keymap.set({ "n", "v", "o" }, "<C-æ>", ")", { remap = false, desc = "Move to next sentence" })
 
 	vim.keymap.set({ "n", "o", "v" }, "ø", "[", { remap = true, desc = "[next" })
 	vim.keymap.set({ "n", "o", "v" }, "æ", "]", { remap = true, desc = "]next" })
@@ -12,7 +14,7 @@ function M.setup(opts)
 
 	-- easy access to /
 	-- i.e: to type ~/ just alt-double tap ¨, then plain double tap ¨.
-	vim.keymap.set({ "n", "v", "o", "i" }, "¨", "/")
+	-- vim.keymap.set({ "n", "v", "o", "i" }, "¨", "/")
 
 	-- spell checker
 	vim.keymap.set("n", "<leader>ån", "<cmd>set spelllang=nb<cr>")
@@ -25,7 +27,7 @@ function M.setup(opts)
 	opts = vim.tbl_deep_extend("force", defaults, opts or {})
 
 	if opts.fholmer then
-		vim.keymap.set({ "n", "v", "o", "i", "c" }, "¨", "/")
+		-- vim.keymap.set({ "n", "v", "o", "i", "c" }, "¨", "/")
 		vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]])
 		vim.keymap.set("n", "<C-Left>", "B", { desc = "Move to previous word" })
 		vim.keymap.set("n", "<C-Right>", "W", { desc = "Move to next word" })
